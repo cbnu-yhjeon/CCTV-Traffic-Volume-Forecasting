@@ -13,3 +13,6 @@ results/videos/
 
 # 학습된 모델 파일
 results/forecast/*/models/
+
+# 개인 IDE 설정
+.vscode/
