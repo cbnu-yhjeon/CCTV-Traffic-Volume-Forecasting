@@ -1,0 +1,29 @@
+# ITS 실시간 CCTV 지점 설정 예시. ITS_API_KEY 환경 변수 필요
+#   1) python -m src.collect.its_cctv --bbox 127.3 36.5 127.6 36.8 --near 36.63 127.49 --snapshot site.jpg
+#   2) site.jpg를 보고 roi · line · lanes 좌표를 채운다
+#   3) python -m src.collect.run_collector --config configs/sites/its_example.yaml --method C3
+name: its_site
+its:
+  road_type: its            # its(국도) | ex(고속도로)
+  bbox: [127.3, 36.5, 127.6, 36.8]   # min_x(경도), min_y(위도), max_x, max_y
+  name: null                # CCTV 이름 일부(예: "하남"). 없으면 near에서 가장 가까운 CCTV
+  near: [36.63, 127.49]     # 위도, 경도
+  refresh_minutes: 30       # 스트림 URL 토큰 갱신 주기
+
+# 아래 좌표는 스냅샷을 보고 다시 잡아야 한다(예시는 1280x720 기준)
+roi: [[300, 250], [980, 250], [1280, 600], [1280, 720], [0, 720], [0, 600]]
+line:
+  p1: [100, 520]
+  p2: [1180, 520]
+  anchor: center
+directions:
+  positive: inbound         # 선 위쪽 → 아래쪽
+  negative: outbound
+lanes:
+  - {name: outbound, t: [0.0, 0.5]}
+  - {name: inbound, t: [0.5, 1.0]}
+
+mog2: {scale: 0.5, var_threshold: 32, min_area: 2000, large_area: 60000, close_kernel: 15, warmup_frames: 50, merge_gap: 10}
+yolo: {weights: yolo11n.pt, conf: 0.3, imgsz: 960, agnostic_nms: true, suppress_contained: true}
+tracker: {iou_threshold: 0.2, max_age: 12, min_hits: 3}
+view_change_threshold: 0.6

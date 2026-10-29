@@ -1,0 +1,223 @@
+{
+  "C1": {
+    "window": [
+      1.0,
+      60.0
+    ],
+    "total": {
+      "gt": 30,
+      "pred": 29,
+      "ape": 3.33
+    },
+    "by_lane": {
+      "lane1": {
+        "gt": 18,
+        "pred": 18,
+        "ape": 0.0
+      },
+      "lane2": {
+        "gt": 12,
+        "pred": 11,
+        "ape": 8.33
+      }
+    },
+    "by_group": {
+      "small": {
+        "gt": 29,
+        "pred": 26,
+        "ape": 10.34
+      },
+      "large": {
+        "gt": 1,
+        "pred": 3,
+        "ape": 200.0
+      }
+    },
+    "bins": {
+      "seconds": 10.0,
+      "gt": [
+        6,
+        3,
+        3,
+        7,
+        7,
+        4
+      ],
+      "pred": [
+        6,
+        3,
+        2,
+        8,
+        6,
+        4
+      ],
+      "mae": 0.5,
+      "mape": 10.32
+    },
+    "events": {
+      "tol_seconds": 1.0,
+      "tp": 28,
+      "fp": 1,
+      "fn": 2,
+      "precision": 0.966,
+      "recall": 0.933,
+      "f1": 0.949,
+      "class_acc": 0.929,
+      "direction_acc": 0.893,
+      "mean_abs_dt": 0.143,
+      "missed_seconds": [
+        22.95,
+        41.97
+      ],
+      "false_seconds": [
+        32.72
+      ]
+    }
+  },
+  "C2": {
+    "window": [
+      1.0,
+      60.0
+    ],
+    "total": {
+      "gt": 30,
+      "pred": 28,
+      "ape": 6.67
+    },
+    "by_lane": {
+      "lane1": {
+        "gt": 18,
+        "pred": 17,
+        "ape": 5.56
+      },
+      "lane2": {
+        "gt": 12,
+        "pred": 11,
+        "ape": 8.33
+      }
+    },
+    "by_group": {
+      "small": {
+        "gt": 29,
+        "pred": 25,
+        "ape": 13.79
+      },
+      "large": {
+        "gt": 1,
+        "pred": 3,
+        "ape": 200.0
+      }
+    },
+    "bins": {
+      "seconds": 10.0,
+      "gt": [
+        6,
+        3,
+        3,
+        7,
+        7,
+        4
+      ],
+      "pred": [
+        5,
+        3,
+        2,
+        8,
+        6,
+        4
+      ],
+      "mae": 0.667,
+      "mape": 13.1
+    },
+    "events": {
+      "tol_seconds": 1.0,
+      "tp": 27,
+      "fp": 1,
+      "fn": 3,
+      "precision": 0.964,
+      "recall": 0.9,
+      "f1": 0.931,
+      "class_acc": 0.926,
+      "direction_acc": 0.926,
+      "mean_abs_dt": 0.148,
+      "missed_seconds": [
+        2.1,
+        22.95,
+        41.97
+      ],
+      "false_seconds": [
+        32.72
+      ]
+    }
+  },
+  "C3": {
+    "window": [
+      1.0,
+      60.0
+    ],
+    "total": {
+      "gt": 30,
+      "pred": 30,
+      "ape": 0.0
+    },
+    "by_lane": {
+      "lane1": {
+        "gt": 18,
+        "pred": 18,
+        "ape": 0.0
+      },
+      "lane2": {
+        "gt": 12,
+        "pred": 12,
+        "ape": 0.0
+      }
+    },
+    "by_group": {
+      "small": {
+        "gt": 29,
+        "pred": 28,
+        "ape": 3.45
+      },
+      "large": {
+        "gt": 1,
+        "pred": 2,
+        "ape": 100.0
+      }
+    },
+    "bins": {
+      "seconds": 10.0,
+      "gt": [
+        6,
+        3,
+        3,
+        7,
+        7,
+        4
+      ],
+      "pred": [
+        6,
+        3,
+        3,
+        7,
+        7,
+        4
+      ],
+      "mae": 0.0,
+      "mape": 0.0
+    },
+    "events": {
+      "tol_seconds": 1.0,
+      "tp": 30,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "class_acc": 0.967,
+      "direction_acc": 1.0,
+      "mean_abs_dt": 0.04,
+      "missed_seconds": [],
+      "false_seconds": []
+    }
+  }
+}

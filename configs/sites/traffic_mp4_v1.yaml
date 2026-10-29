@@ -1,0 +1,44 @@
+# v1: 초기 설정(오류 분석 전). 결과는 results/counting/v1/
+# 개발용 녹화 영상 (industrial_computor_vision/Data/traffic.mp4)
+# 1920x1080, 25fps, 60초. 고정 망원 카메라, 2차로 일방향(차량이 카메라 쪽으로 진행)
+name: traffic_mp4
+source: data/external/traffic.mp4
+start_time: "2026-10-29 12:00:00"   # 녹화 시각 정보가 없어 임의 지정(집계 시험용)
+
+# 검출을 받을 도로 영역(원본 해상도 픽셀). 가드레일 · 갓길 · 하늘 제외
+roi: [[250, 360], [1200, 360], [1920, 820], [1920, 1080], [650, 1080], [200, 450]]
+
+# 가상선: p1→p2 기준 음(위쪽) → 양(아래쪽)으로 넘어가면 positive
+line:
+  p1: [560, 700]
+  p2: [1700, 700]
+  anchor: center
+directions:
+  positive: toward_camera
+  negative: away_from_camera
+lanes:                    # 가상선 위 위치 t(0=p1, 1=p2)로 차로 구분
+  - {name: lane1, t: [0.0, 0.51]}
+  - {name: lane2, t: [0.51, 1.0]}
+
+mog2:
+  scale: 0.5
+  history: 500
+  var_threshold: 32
+  min_area: 6000
+  large_area: 150000
+  open_kernel: 5
+  close_kernel: 21
+  warmup_frames: 25
+
+yolo:
+  weights: yolo11n.pt
+  conf: 0.3
+  imgsz: 960
+
+tracker:
+  iou_threshold: 0.2
+  max_age: 12
+  min_hits: 3
+
+# 시점 변화(PTZ) 감지: 기준 프레임과의 유사도가 이 값보다 낮으면 해당 구간 무효
+view_change_threshold: 0.6

@@ -1,0 +1,33 @@
+seconds,lane,cls,direction,note
+0.15,lane1,car,toward_camera,red hatchback (warm-up window)
+0.85,lane2,car,toward_camera,white hatchback (warm-up window)
+1.40,lane1,car,toward_camera,
+2.10,lane1,car,toward_camera,
+3.00,lane2,car,toward_camera,red SUV
+3.35,lane1,car,toward_camera,
+7.00,lane1,car,toward_camera,
+9.55,lane2,car,toward_camera,white
+13.45,lane1,car,toward_camera,dark SUV
+15.27,lane2,car,toward_camera,
+16.28,lane1,car,toward_camera,
+22.95,lane1,car,toward_camera,silver sedan
+23.87,lane2,car,toward_camera,silver
+26.37,lane2,car,toward_camera,blue
+32.55,lane1,car,toward_camera,
+33.13,lane2,car,toward_camera,
+33.75,lane1,car,toward_camera,
+35.10,lane2,car,toward_camera,red
+37.84,lane1,car,toward_camera,
+37.87,lane2,car,toward_camera,
+39.00,lane1,car,toward_camera,
+41.97,lane2,car,toward_camera,maroon hatchback
+42.07,lane1,motorcycle,toward_camera,
+43.20,lane1,car,toward_camera,
+43.82,lane2,van,toward_camera,panel van with roof box
+45.60,lane1,car,toward_camera,
+48.02,lane2,car,toward_camera,
+49.32,lane1,car,toward_camera,
+53.40,lane1,car,toward_camera,
+54.33,lane2,car,toward_camera,
+58.03,lane1,car,toward_camera,
+59.90,lane1,car,toward_camera,crosses in the last frames

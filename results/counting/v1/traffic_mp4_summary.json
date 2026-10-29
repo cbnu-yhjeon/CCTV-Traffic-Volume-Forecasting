@@ -1,0 +1,67 @@
+[
+  {
+    "site": "traffic_mp4",
+    "method": "C1",
+    "detector": "mog2",
+    "tracker": "iou",
+    "frames": 1501,
+    "seconds": 12.08,
+    "fps": 124.2,
+    "total": 31,
+    "by_lane": {
+      "lane1": 19,
+      "lane2": 12
+    },
+    "by_class": {
+      "large": 1,
+      "small": 30
+    },
+    "by_direction": {
+      "away_from_camera": 1,
+      "toward_camera": 30
+    }
+  },
+  {
+    "site": "traffic_mp4",
+    "method": "C2",
+    "detector": "mog2",
+    "tracker": "lk",
+    "frames": 1501,
+    "seconds": 20.22,
+    "fps": 74.2,
+    "total": 31,
+    "by_lane": {
+      "lane1": 19,
+      "lane2": 12
+    },
+    "by_class": {
+      "large": 1,
+      "small": 30
+    },
+    "by_direction": {
+      "toward_camera": 31
+    }
+  },
+  {
+    "site": "traffic_mp4",
+    "method": "C3",
+    "detector": "yolo",
+    "tracker": "iou",
+    "frames": 1501,
+    "seconds": 37.92,
+    "fps": 39.6,
+    "total": 34,
+    "by_lane": {
+      "lane1": 20,
+      "lane2": 14
+    },
+    "by_class": {
+      "car": 30,
+      "motorcycle": 1,
+      "truck": 3
+    },
+    "by_direction": {
+      "toward_camera": 34
+    }
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "calendar": [
+    "hour",
+    "dow",
+    "month",
+    "day_of_year",
+    "is_weekend",
+    "is_holiday",
+    "is_offday",
+    "prev_offday",
+    "next_offday",
+    "hour_sin",
+    "hour_cos",
+    "dow_sin",
+    "dow_cos",
+    "doy_sin",
+    "doy_cos"
+  ],
+  "weather": [
+    "temperature_2m",
+    "relative_humidity_2m",
+    "precipitation",
+    "rain",
+    "snowfall",
+    "snow_depth",
+    "cloud_cover",
+    "wind_speed_10m",
+    "weather_code",
+    "is_rain",
+    "is_snow"
+  ],
+  "lag": [
+    "lag_1d",
+    "lag_2d",
+    "lag_7d",
+    "lag_14d",
+    "same_slot_4w_mean",
+    "roll24h_mean",
+    "roll24h_std",
+    "roll7d_mean"
+  ]
+}

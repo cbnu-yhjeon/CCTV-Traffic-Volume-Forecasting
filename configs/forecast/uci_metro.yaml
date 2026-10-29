@@ -1,0 +1,12 @@
+# 예측 파이프라인 검증용 대리 데이터: UCI Metro Interstate Traffic Volume (I-94, 시간별)
+name: uci_metro
+dataset: uci_metro
+freq: 1h
+horizon: 1D                  # 전날까지의 관측으로 다음 날 시간대별 교통량 예측
+location: {lat: 44.963, lon: -93.196, timezone: America/Chicago}
+holidays: {country: US, subdiv: MN}
+split:
+  valid_start: "2017-01-01"  # 학습: ~2016 (2014-08 ~ 2015-06은 원자료 결측)
+  test_start: "2018-01-01"   # 검증: 2017 / 테스트: 2018-01 ~ 2018-09
+mape_floor_ratio: 0.05       # 실제값이 평균의 5% 미만인 구간은 MAPE에서 제외(장비 오류로 보이는 0 근처 값)
+out: results/forecast/uci_metro

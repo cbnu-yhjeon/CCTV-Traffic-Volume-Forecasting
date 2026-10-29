@@ -1,0 +1,15 @@
+# CCTV 수집 데이터로 학습하는 설정 예시. 수집기가 data/counts/<site>_15min.csv를 쌓은 뒤 사용
+#   python -m src.models.train --config configs/forecast/cctv_site.yaml
+name: its_site
+dataset: counts
+path: data/counts/its_site_15min.csv
+freq: 15min
+horizon: 1D
+min_coverage: 0.8            # 이보다 덜 본 구간은 결측
+location: {lat: 36.63, lon: 127.49, timezone: Asia/Seoul}
+holidays: {country: KR}
+split:                       # 수집 기간에 맞게 조정(시간 순서 분할)
+  valid_start: "2026-11-20"
+  test_start: "2026-11-27"
+mape_floor_ratio: 0.05
+out: results/forecast/its_site
